@@ -1,0 +1,90 @@
+    1  sudo yum update 
+    2  ls
+    3  pwd
+    4  ls
+    5  ls /
+    6  ls /home
+    7  ls -1
+    8  ls -l
+    9  man ls
+   10  pwd
+   11  cd ^C
+   12  PWD
+   13  pwd
+   14  cd /usr/bin
+   15  pwd
+   16  cd
+   17  pwd
+   18  cd /home
+   19  pwd
+   20  cd
+   21  pwd
+   22  mkdir c268
+   23  ls
+   24  cd c268
+   25  pwd
+   26  cd
+   27  ls
+   28  ls -l
+   29  pwd
+   30  ls -ltr
+   31  touch file.txt
+   32  ls
+   33  pwd
+   34  touch abc.txt
+   35  ls
+   36  ls -l
+   37  ls -ltr
+   38  cd
+   39  pwed
+   40  pwd
+   41  cd /home 
+   42  ls
+   43  cd ec2-user
+   44  cd /home/ec2-user
+   45  pwd
+   46  ls
+   47  cd /
+   48  ls
+   49  cd /home/ec2-user/c268
+   50  pwd
+   51  uname
+   52  uname -a
+   53  cd
+   54  pwd
+   55  history
+   56  sudo yum install git 
+   57  git --version 
+   58  cd
+   59  pwd
+   60  mkdir excer1
+   61  pwd
+   62  cd var/log
+   63  cd /var/log
+   64  cd ..
+   65  pwd
+   66  ls
+   67  ls -l
+   68  ls -ltr
+   69  cd
+   70  pwd
+   71  cd /
+   72  pwd
+   73  cd ~
+   74  pwd
+   75  cd /home 
+   76  ls
+   77  cd /ec2-user
+   78  cd ec2-user
+   79  pwd
+   80  cd var
+   81  cd /var
+   82  ls
+   83  ls -ltr
+   84  uname -a 
+   85  uname --version 
+   86  history > name.YYMMDD.module2
+   87  pwd
+   88  cd
+   89  pwd
+   90  history > name.YYMMDD.module2
