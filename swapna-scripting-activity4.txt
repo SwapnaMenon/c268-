@@ -1,0 +1,32 @@
+#!/bin/bash
+
+: '
+
+Author: Swapna Menon
+Version :1 
+Description: password validation 
+
+'
+
+
+echo "Enter the desired password:"
+read password  #input the desired password" 
+
+Length=${#password} #determines the the desired length of the password input 
+if (( $Length<8 )) #if statement used to check if the inputed password's lenghth is greater than 8 charecters
+then 
+	echo "Password is too short or does not meet the criteria."
+	exit 1 
+elif [[ $password =~ [a-z] && $password =~ [A-Z] && $password =~ [0-9] ]]; #if statement used to ensure that the password inputed meets all the validation critera such as numbers and letters. 
+then 
+	echo "Password matches the validation criteria"
+else 
+	echo "Password does not match the validation critera"
+# else command used to test if the password entered is missing any of the required validation cariteria"
+	
+fi
+
+
+
+exit 0
+
