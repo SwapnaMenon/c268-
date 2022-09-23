@@ -1,0 +1,28 @@
+#!/bin/bash
+
+: '
+
+Author: Swapna 
+Version: 1
+Description: Activity 1-Simple shell script
+
+'
+
+
+
+
+fileNumber='ls | wc -l'
+
+echo "number of files:$fileNumber"
+
+echo "USERNAME: ${USER}"             #display username
+echo "Date: $(date +%Y,+%m,+%d)"     #display date 
+echo "Time: $(date '+%H:%M:%S')"     #display time 
+echo "Current working directory: $(pwd)" #display directory
+echo "Number of files: $(ls | wc -l)" #display number of files 
+echo "Biggest file in current dir: $(ls -S | awk '{print}' | head -1)" #display largestfile in the directory
+
+
+
+
+exit 0
