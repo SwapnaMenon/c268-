@@ -1,0 +1,85 @@
+#!/bin/bash
+
+echo "Please enter 5-10 integers"
+
+declare -a arr
+
+for i in {1..5} #to force the user to enter 5-10 numbers
+do
+	echo "Write your number:"
+	read number
+	if [[ $((number)) != $number ]] #read number is validated if the number is an integer.#if the condition is true or else it will return 
+	then
+		echo "please enter an integer value" 
+		exit 1	
+	fi		
+
+	arr+=($number) #array + numnber #apending the variable to the array.  
+done 
+for i in ${arr[@]} #printing the value stored in the array
+do 
+	echo $i
+done
+echo "do you want to continue"
+read yn #defining the variable yn. 
+if [[ $yn = 'yes' ]]
+then 
+	echo "enter 5 intergers again"
+	for i in {6..10} # let the user inpiut 6-10 intger values.
+	do
+		echo "write your $i number"
+		read number
+		if [[ $((number)) != $number ]] #read number is validated if the number is an integer.#if th    e condition is true or else it will return
+		then
+			echo "please enter an integer value"
+			exit 1
+		fi
+
+		arr+=($number)
+	done 
+	for i in ${arr[@]} #printing the value stored in the array
+	do
+		echo $i
+	done
+
+elif   [[ $yn = 'no' ]]
+then 
+	echo "continue with calculations"
+else
+	echo "plase enter yes or no"
+	exit 1 # error message
+fi 
+
+prod=1
+sum=0
+min=${arr[0]}
+max=${arr[0]}
+for i in ${arr[@]} #i will store the value inside the array 
+do
+	prod=$(( prod*i ))
+	sum=$(( sum+i ))
+
+	if [[ $i -lt $min ]]
+	then 
+		min=$i
+	fi
+	if [[ $i -gt $max ]]
+	then 
+		max=$i
+	fi
+	echo $i
+done
+average=$(( sum / ${#arr[@]} ))
+
+echo "product: $prod"
+echo "sum of the integers would be : $sum"
+echo "max value : $max"
+echo "min value: $min"
+echo "average value: $average"
+
+
+
+	
+
+	exit 0
+
