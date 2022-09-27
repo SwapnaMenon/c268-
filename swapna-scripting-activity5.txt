@@ -1,0 +1,34 @@
+#!/bin/bash
+
+:'
+
+Author : Swapna Menon
+Version:1
+Description: Activity 5
+
+'
+
+echo "Enter number"
+read n
+
+if [[ $n =~ ^[0-9]+$ ]]
+then
+	echo "value: $n"
+
+	length=${#n} #counting the length of the values entered
+	reversevalue="  "
+	for (( i=1; i<=length; i++ ))
+	do
+		reversevalue+=${n:length-$i:1} #extract the substring from the input value
+	done
+	echo "reverse order of the values entered: $reversevalue "
+	
+	exit 0
+else
+	echo "Please enter a number only"
+	exit 1 
+fi
+
+exit 0
+
+
