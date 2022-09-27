@@ -1,13 +1,11 @@
 #!/bin/bash
 
-
 : '
 
 Author: Swapna Menon
 Version :1
 Description: sorting numbers-activity 11
 '
-
 
 if [ -e "numbers.txt" ]
 then
@@ -16,7 +14,7 @@ fi
 
 touch numbers.txt # create a new numbers.txt file and overrirde any previously created file. 
 
-echo "Original list provided"
+echo "Original file content provided"
 echo "5 6 3 7 4 4 9 6 7 9 8 2 3 6 4 5 1 1 3 10 12"> numbers.txt #add value to the numbers text file
 
 echo "`awk '{print}' numbers.txt`" #execute the command with the back ticks and print the contnt
@@ -24,23 +22,14 @@ echo "`awk '{print}' numbers.txt`" #execute the command with the back ticks and 
 #sorting the file in reverse order
 sed 's/\ /\n/g' numbers.txt | sort -nr > sortfile.txt #sort nr- numbers are sorted in reverse order
 
-echo "sorted number list"
+echo "sorted number list in  reverse order"
 echo "`awk '{print}' sortfile.txt`"
 
+#removing the duplicate values from the original contents of numbers.txt
 sed 's/\ /\n/g' sortfile.txt | uniq > uniqfile.txt
-
 
 echo "the sorted file with the unique output and duplicates removed"
 echo "`awk '{print}' uniqfile.txt`"
-
-
-
-
-
-
-
-
-
 
 exit 0
 
