@@ -79,7 +79,7 @@ do
 	#echo $i
 done
 average=$(( sum / ${#arr[@]} ))
-
+#print the results of the calculation
 echo "product: $prod"
 echo "sum of the integers would be : $sum"
 echo "max value : $max"
