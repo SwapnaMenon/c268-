@@ -8,7 +8,6 @@ Description: password validation
 
 '
 
-
 echo "Enter the desired password:"
 read password  #input the desired password" 
 
@@ -22,6 +21,7 @@ then
 	echo "Password matches the validation criteria"
 else 
 	echo "Password does not match the validation critera"
+	exit 1 
 # else command used to test if the password entered is missing any of the required validation cariteria"
 	
 fi

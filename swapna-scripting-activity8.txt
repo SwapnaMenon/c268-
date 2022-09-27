@@ -23,10 +23,10 @@ do
 
 	arr+=($number) #apending the variable to the array.  
 done 
-for i in ${arr[@]} #printing the value stored in the array
-do 
-	echo $i
-done
+#for i in ${arr[@]} #printing the value stored in the array
+#do 
+	#echo $i
+#done
 echo "do you want to continue"
 read yn #defining the variable yn. 
 if [[ $yn = 'yes' ]]
@@ -44,19 +44,21 @@ then
 
 		arr+=($number)
 	done 
-	for i in ${arr[@]} #printing the value stored in the array
-	do
-		echo $i
-	done
+	#for i in ${arr[@]} #printing the value stored in the array
+	#do
+		#echo $i
+	#done
 
 elif   [[ $yn = 'no' ]]
 then 
-	echo "continue with calculations"
+	echo "continue with calculations and the following are the values you entered"
 else
 	echo "plase enter yes or no"
 	exit 1 # error message
 fi 
 
+echo "performing calculations and the following are the values you entered"
+echo "${arr[*]}"
 prod=1
 sum=0
 min=${arr[0]}
@@ -74,7 +76,7 @@ do
 	then 
 		max=$i
 	fi
-	echo $i
+	#echo $i
 done
 average=$(( sum / ${#arr[@]} ))
 
