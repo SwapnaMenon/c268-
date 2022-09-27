@@ -1,20 +1,27 @@
 #!/bin/bash
 
-echo "Please enter 5-10 integers"
+: '
 
+Author: Swapna 
+Version: 1
+Description : user choosing 5-10 integers and performing calculation
+
+'
+
+echo "Please enter 5-10 integers"
 declare -a arr
 
 for i in {1..5} #to force the user to enter 5-10 numbers
 do
 	echo "Write your number:"
 	read number
-	if [[ $((number)) != $number ]] #read number is validated if the number is an integer.#if the condition is true or else it will return 
+	if [[ $((number)) != $number ]] #number is validated for whether or not the value entered is an integer,if the condition is false,return an error message 
 	then
-		echo "please enter an integer value" 
+		echo "please enter an integer value only(1-10)" 
 		exit 1	
 	fi		
 
-	arr+=($number) #array + numnber #apending the variable to the array.  
+	arr+=($number) #apending the variable to the array.  
 done 
 for i in ${arr[@]} #printing the value stored in the array
 do 
@@ -25,13 +32,13 @@ read yn #defining the variable yn.
 if [[ $yn = 'yes' ]]
 then 
 	echo "enter 5 intergers again"
-	for i in {6..10} # let the user inpiut 6-10 intger values.
+	for i in {6..10} # let the user input 6-10 intger values.
 	do
 		echo "write your $i number"
 		read number
-		if [[ $((number)) != $number ]] #read number is validated if the number is an integer.#if th    e condition is true or else it will return
+		if [[ $((number)) != $number ]] #number is validated for whether or not the value entered is an integer,if the condition is false,return an error
 		then
-			echo "please enter an integer value"
+			echo "please enter an integer value only(1-10)"
 			exit 1
 		fi
 
@@ -76,10 +83,6 @@ echo "sum of the integers would be : $sum"
 echo "max value : $max"
 echo "min value: $min"
 echo "average value: $average"
-
-
-
-	
 
 	exit 0
 
